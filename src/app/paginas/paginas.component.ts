@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { WebsocketService } from '../servicios/websocket/websocket.service';
+
+declare function init_plugins();
 
 @Component({
   selector: 'app-paginas',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginasComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public wsService: WebsocketService
+  ) { }
 
   ngOnInit() {
+    init_plugins();
   }
 
 }

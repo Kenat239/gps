@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 
 // Sockets
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-
 const config: SocketIoConfig = {
   url: environment.wsUrl, options: {}
-};
+ };
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +14,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './compartidos/header/header.component';
 import { SidebarComponent } from './compartidos/sidebar/sidebar.component';
@@ -23,6 +21,10 @@ import { FooterComponent } from './compartidos/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginasComponent } from './paginas/paginas.component';
 import { AuthInterceptor } from './clases/interceptor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { configSockets } from './config/config';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { AuthInterceptor } from './clases/interceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     SocketIoModule.forRoot(config),
     BrowserAnimationsModule

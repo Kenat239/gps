@@ -1,3 +1,59 @@
-<p>
-  login works!
-</p>
+<div class='login'>
+    <!-- Login -->
+    <div class="login__block active" id="l-login">
+        <div class="login__block__header">
+            <img src="assets/img/logo_bcoNormal.png" />
+
+            <div class="actions actions--inverse login__block__actions">
+                <div class="dropdown">
+                    <i data-toggle="dropdown" class="zwicon-more-h actions__item"></i>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-forget-password" href="">Olvide mi contraseña</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="login__block__body">
+            <form NgNativeValidate [formGroup]="login" (ngSubmit)="ingresar()">
+                <div class="form-group">
+                    <input formControlName="email" name="email" type="email" class="form-control text-center" placeholder="Usuario/Email">
+                </div>
+
+                <div class="form-group">
+                    <input formControlName="password" name="password" type="password" class="form-control text-center" placeholder="Password">
+                </div>
+
+                <button class="btn btn-theme btn--icon" type="submit" [disabled]="!login.valid"><i class="zwicon-checkmark"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Recuperar Password -->
+    <div class="login__block" id="l-forget-password">
+        <div class="login__block__header">
+            <img src="assets/img/logo_bcoNormal.png" />
+
+            <div class="actions actions--inverse login__block__actions">
+                <div class="dropdown">
+                    <i data-toggle="dropdown" class="zwicon-more-h actions__item"></i>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-login" href="">Ya tengo una cuenta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="login__block__body">
+            <p class="mb-5">Ingrese su correo, se le enviara una contraseña provisional</p>
+
+            <div class="form-group">
+                <input type="text" class="form-control text-center" placeholder="Correo electrónico">
+            </div>
+
+            <a class="btn btn--icon login__block__btn"><i class="zmdi zmdi-check"></i></a>
+        </div>
+    </div>
+</div>

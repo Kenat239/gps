@@ -1,3 +1,40 @@
-<p>
-  header works!
-</p>
+<header class="header animated fadeIn">
+    <div class="navigation-trigger d-xl-none" data-sa-action="aside-open" data-sa-target=".sidebar">
+        <i class="zwicon-hamburger-menu"></i>
+    </div>
+
+    <div class="logo d-none d-sm-inline flex">
+        <img src="../../../assets/img/logo_bcoNormal.png">
+    </div>
+
+    <form class="search">
+        <div class="search__inner">
+            <input type="text" class="search__text" placeholder="Buscar usuarios, radios o gps...">
+            <i class="zwicon-search search__helper"></i>
+            <i class="zwicon-arrow-left search__reset" data-sa-action="search-close"></i>
+        </div>
+    </form>
+
+    <ul class="top-nav">
+        <li class="d-xl-none"><a href="" data-sa-action="search-open"><i class="zwicon-search"></i></a></li>
+
+        <li class="dropdown top-nav__notifications">
+            <a data-toggle="dropdown" class="top-nav__notify">
+                <i class="zwicon-bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
+                <div class="dropdown-header">
+                    Notificaciones
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="clock d-none d-md-inline-block">
+        <div class="time">
+            <span class="time__hours"></span>
+            <span class="time__min"></span>
+            <span class="time__sec"></span>
+        </div>
+    </div>
+</header>
