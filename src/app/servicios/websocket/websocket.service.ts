@@ -18,6 +18,10 @@ export class WebsocketService {
     public _usuarioService: UsuarioService
   ) {
     this.checkStatus();
+
+    if ( this.socketStatus = false ) {
+      this.socket.connect();
+    }
    }
 
   checkStatus() {
@@ -33,12 +37,34 @@ export class WebsocketService {
           console.log(data);
         });
       });
+
+      this.socketStatus = true;
+    });
+
+    this.socket.on('disconnect', () => {
+      console.log('Desconectado del servidor');
+      this.socketStatus = false;
     });
 
     this.socket.on('desconectar', () => {
       console.log('El token tiene problemas, estas siendo desconectado');
 
       this.router.navigate(['/login']);
+      this.socket.disconnect();
     });
   }
+
+  emit( evento: string, payload?: any, callback?: Function ) {
+    console.log('Emitiendo mensaje');
+    this.socket.emit( evento, payload, callback );
+  }
+
+  listen( evento: string ) {
+    return this.socket.fromEvent( evento );
+  }
+
+  conectar() {
+    this.socket.connect();
+  }
+
 }

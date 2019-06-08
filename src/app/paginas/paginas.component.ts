@@ -16,6 +16,12 @@ export class PaginasComponent implements OnInit {
 
   ngOnInit() {
     init_plugins();
+
+    this.wsService.conectar();
+
+    this.wsService.listen('prueba').subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
 }
