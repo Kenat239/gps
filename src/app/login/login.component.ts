@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this._usuarioService.login( usuario )
         .subscribe(( data: any ) => {
           const datos = data.body;
-          this._usuarioService.guardarStorage( datos.id, datos.token, datos.usuario );
+          this._usuarioService.guardarStorage( datos.id, datos.token, datos.usuario, datos.menu );
           this.router.navigate(['/inicio']);
         },
         ( error: any ) => {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsocketService } from '../servicios/websocket/websocket.service';
+import { UsuarioService } from '../servicios/usuario/usuario.service';
 
 declare function init_plugins();
 
@@ -11,7 +12,8 @@ declare function init_plugins();
 export class PaginasComponent implements OnInit {
 
   constructor(
-    public wsService: WebsocketService
+    public wsService: WebsocketService,
+    public _usuarioService: UsuarioService
   ) { }
 
   ngOnInit() {
@@ -19,9 +21,10 @@ export class PaginasComponent implements OnInit {
 
     this.wsService.conectar();
 
-    this.wsService.listen('prueba').subscribe((data: any) => {
+    this.wsService.listen('mensaje').subscribe((data: any) => {
       console.log(data);
     });
+
   }
 
 }
