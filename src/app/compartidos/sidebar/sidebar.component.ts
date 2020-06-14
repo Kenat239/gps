@@ -16,14 +16,14 @@ export class SidebarComponent implements OnInit {
     public _usuarioService: UsuarioService
   ) {
     this.usuario = this._usuarioService.usuario;
-    this.nombre = this.usuario.nombre + ' ' + this.usuario.apellidoP + ' ' + this.usuario.apellidoM;
+   // this.nombre = this.usuario.nombre + ' ' + this.usuario.apellidoP + ' ' + this.usuario.apellidoM;
     this.cargarMenu();
    }
 
   ngOnInit() {
   }
 
-  verPerfil(){
+  verPerfil() {
     console.log('Le diste click en perfil');
   }
 
@@ -31,7 +31,7 @@ export class SidebarComponent implements OnInit {
     console.log('Le diste click en configuraciones');
   }
 
-  cerrarSesion(){
+  cerrarSesion() {
     this._usuarioService.logout();
   }
 

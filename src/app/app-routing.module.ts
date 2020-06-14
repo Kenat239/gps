@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: '',
     component: PaginasComponent,
-    canActivate: [ LoginGuard ],
+   // canActivate: [ LoginGuard ],
     loadChildren: './paginas/paginas.module#PaginasModule'
   }
 ];

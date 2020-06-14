@@ -20,7 +20,7 @@ import { SidebarComponent } from './compartidos/sidebar/sidebar.component';
 import { FooterComponent } from './compartidos/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginasComponent } from './paginas/paginas.component';
-import { AuthInterceptor } from './clases/interceptor';
+// import { AuthInterceptor } from './clases/interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { configSockets } from './config/config';
 import { environment } from 'src/environments/environment';
@@ -45,11 +45,11 @@ import { environment } from 'src/environments/environment';
     BrowserAnimationsModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true
-    }
+   // {
+      // provide: HTTP_INTERCEPTORS,
+     // useClass: AuthInterceptor,
+     // multi: true
+     // }
   ],
   bootstrap: [AppComponent]
 })

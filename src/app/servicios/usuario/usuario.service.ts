@@ -57,8 +57,8 @@ export class UsuarioService {
     this.token = token;
   }
 
-  actualizarStorage(menu: string){
-    localStorage.setItem('menu', JSON.stringify(menu))
+  actualizarStorage(menu: string) {
+    localStorage.setItem('menu', JSON.stringify(menu));
   }
 
   cargarStorage() {
