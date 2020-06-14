@@ -1,0 +1,53 @@
+<div class="login__block active" id="l-login">
+    <div class="login__block__header">
+        <img src="assets/img/nematronix_largo.png" />
+
+        <div class="actions actions--inverse login__block__actions">
+            <div class="dropdown">
+                <i data-toggle="dropdown" class="zwicon-more-h actions__item"></i>
+
+
+    <div class="login__block__body">
+        <form NgNativeValidate [formGroup]="Reg" (ngSubmit)="Register()">
+
+            <div class="form-group">
+                <input formControlName="nombre"  name="nombre" type="text" class="form-control text-center" placeholder="Nombre">
+            </div>
+
+            <div class="form-group">
+                <input formControlName="apellidoP"  name="apellidoP" type="text" class="form-control text-center" placeholder="Apellido paterno">
+            </div>
+
+            <div class="form-group">
+                <input formControlName="apellidoM"  name="apellidoM" type="text" class="form-control text-center" placeholder="Apellido materno">
+            </div>
+
+            <div class="form-group">
+                <input formControlName="email"  name="email" type="email" class="form-control text-center" placeholder="Correo electrónico">
+            </div>
+
+            <div class="form-group">
+                <input formControlName="password" name="password" type="password" class="form-control text-center" required minlength="4"  placeholder="Contraseña">
+
+                <div >
+                     <div *ngIf="Reg.get('password').dirty && !Reg.get('password').valid" class="alert alert-danger">
+                                    contraseña debe ser mayor a 4 caracteres
+                            </div>
+                    </div>
+            </div>
+            <div class="form-group">
+                <input formControlName="password2"  name="password2" type="password" class="form-control text-center" placeholder="Confirmar contraseña">
+    
+            </div>
+
+           
+       
+   
+
+            <div>
+                <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-forget-password" href="" routerLink="/login">Ya tengo cuenta!</a>
+            </div>
+            <button class="btn btn-theme btn--icon" type="submit" ><i class="zwicon-checkmark"></i></button>
+        </form>
+    </div>
+</div>

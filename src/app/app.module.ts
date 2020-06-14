@@ -24,6 +24,7 @@ import { PaginasComponent } from './paginas/paginas.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { configSockets } from './config/config';
 import { environment } from 'src/environments/environment';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { environment } from 'src/environments/environment';
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    PaginasComponent
+    PaginasComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

@@ -23,9 +23,27 @@ export class UsuarioService {
   ) { this.cargarStorage(); }
 
   login( usuario: Usuario ) {
-    const url = BACKEND + '/login';
+    const url = BACKEND + '/usuario/login';
 
     return this.http.post<Usuario>( url, usuario, { observe: 'response'} );
+  }
+
+  registro( usuario: Usuario) {
+    const url = BACKEND + '/usuario/registrar';
+
+    return this.http.post <Usuario> (url, usuario, {observe: 'response'} );
+  }
+
+  obtenerinfo(id: any) {
+    const url = BACKEND + '/usuario/obtener';
+
+    return this.http.get(url, id )
+  }
+
+  actualizar (usuario:Usuario) {
+    const url = BACKEND + '/actualizar';
+
+    return this.http.put(url, usuario, {observe: 'response'} );
   }
 
   logout() {

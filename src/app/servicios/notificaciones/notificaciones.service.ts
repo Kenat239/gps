@@ -10,10 +10,10 @@ export class NotificacionesService {
 
   mSwal({ titulo, mensaje, tipo }: { titulo: string; mensaje: string; tipo: any; }) {
     swal.fire({
-      // title: titulo,
-      // text: mensaje,
-      // type: tipo,
-     // background: 'rgba(0, 0, 0, 0.96)'
+       title: titulo,
+       text: mensaje,
+       // type: tipo,
+      background: 'rgba(0, 0, 0, 0.96)'
     });
   }
 }
