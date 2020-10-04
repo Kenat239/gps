@@ -25,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { configSockets } from './config/config';
 import { environment } from 'src/environments/environment';
 import { RegistroComponent } from './registro/registro.component';
+import { PerfilusuarioComponent } from './modal/perfil-user/perfilusuario/perfilusuario.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { RegistroComponent } from './registro/registro.component';
     SidebarComponent,
     FooterComponent,
     PaginasComponent,
-    RegistroComponent
+    RegistroComponent,
+    PerfilusuarioComponent
   ],
   imports: [
     BrowserModule,

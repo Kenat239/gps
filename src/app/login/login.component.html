@@ -25,6 +25,10 @@
                     <input formControlName="password" name="password" type="password" class="form-control text-center" placeholder="Password">
                 </div>
 
+                <div>
+                  <p> ¿No tienes cuenta? <a class="dropdown-item"  routerLink="/registro">Registrate</a> </p>
+                </div>
+
                 <button class="btn btn-theme btn--icon" type="submit" [disabled]="!login.valid"><i class="zwicon-checkmark"></i></button>
             </form>
         </div>

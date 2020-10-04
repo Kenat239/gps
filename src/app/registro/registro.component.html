@@ -2,12 +2,9 @@
     <div class="login__block__header">
         <img src="assets/img/nematronix_largo.png" />
 
-        <div class="actions actions--inverse login__block__actions">
-            <div class="dropdown">
-                <i data-toggle="dropdown" class="zwicon-more-h actions__item"></i>
+        
 
-
-    <div class="login__block__body">
+    <div>
         <form NgNativeValidate [formGroup]="Reg" (ngSubmit)="Register()">
 
             <div class="form-group">
@@ -45,7 +42,7 @@
    
 
             <div>
-                <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-forget-password" href="" routerLink="/login">Ya tengo cuenta!</a>
+                <p>¿Ya tienes cuenta? <a class="dropdown-item" routerLink="/login"> Inicia sesión</a></p>
             </div>
             <button class="btn btn-theme btn--icon" type="submit" ><i class="zwicon-checkmark"></i></button>
         </form>
